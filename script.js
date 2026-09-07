@@ -1,0 +1,3 @@
+function toggleMenu(){document.querySelector('.nav').classList.toggle('open')}
+function calc(){const l=parseFloat(document.getElementById('l').value),w=parseFloat(document.getElementById('w').value),d=parseFloat(document.getElementById('d').value),r=document.getElementById('result');if(!l||!w||!d||l<=0||w<=0||d<=0){r.textContent='Please enter all three dimensions.';return}const litres=l*w*d*1000;const gallons=litres*0.219969; r.innerHTML=`Estimated volume: <strong>${Math.round(litres).toLocaleString()} litres</strong> (${Math.round(gallons).toLocaleString()} UK gallons).`}
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav').classList.remove('open')));
