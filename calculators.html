@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Koi Pond Calculator</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="page-head"><p class="kicker">📐 POND CALCULATOR</p><h1>Pond Volume Calculator</h1><p>Estimate pond volume from length, width and average depth.</p></header>
+<nav><a href="index.html">Home</a><a href="our-story.html">Our Story</a><a href="koi.html">Koi</a><a href="ponds.html">Ponds</a><a href="water.html">Water</a><a href="plants.html">Plants</a><a href="health.html">Health</a><a href="calculators.html">Calculators</a></nav>
+<main class="content"><div class="calculator">
+<label>Length (metres)<input id="l" type="number" step="0.01"></label>
+<label>Width (metres)<input id="w" type="number" step="0.01"></label>
+<label>Average depth (metres)<input id="d" type="number" step="0.01"></label>
+<button class="button" onclick="calc()">Calculate</button>
+<h2 id="result">Enter your measurements.</h2>
+</div></main>
+<script>
+function calc(){const l=+document.getElementById('l').value,w=+document.getElementById('w').value,d=+document.getElementById('d').value;const litres=l*w*d*1000;document.getElementById('result').textContent=litres>0?`Estimated volume: ${litres.toLocaleString(undefined,{maximumFractionDigits:0})} litres (${(litres/1000).toFixed(2)} m³)`: 'Please enter all three measurements.';}
+</script><footer>Grandad Ray & Adam's Koi Hub</footer></body></html>
